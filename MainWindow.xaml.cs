@@ -241,7 +241,7 @@ namespace WPFAppWithDatabaseTest
 
             if (!string.IsNullOrEmpty(formNameEdit.Text))
             {
-                name = formNameEdit.Text;
+                name = formNameEdit.Text; 
                 appendToQuery += $"NAME = '{name}'";
             }                 
             else
