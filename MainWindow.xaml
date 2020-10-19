@@ -1,0 +1,36 @@
+﻿<Window x:Class="WPFAppWithDatabaseTest.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPFAppWithDatabaseTest"
+        mc:Ignorable="d"
+        Title="WPFApp CRUD Simulator" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="198*"/>
+            <ColumnDefinition Width="199*"/>
+        </Grid.ColumnDefinitions>
+        <Button x:Name="buttonCreateUser" Content="Create New User" HorizontalAlignment="Left" Margin="70,192,0,0" VerticalAlignment="Top" Width="120" Click="buttonCreateUser_Click" Height="19"/>
+        <TextBox x:Name="formName" HorizontalAlignment="Left" Height="24" Margin="132,91,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="218" TextChanged="formName_TextChanged"/>
+        <TextBlock HorizontalAlignment="Left" Margin="70,91,0,0" TextWrapping="Wrap" Text="Name :" VerticalAlignment="Top" Height="24" Width="54"/>
+        <TextBlock HorizontalAlignment="Left" Margin="70,125,0,0" TextWrapping="Wrap" Text="Age:" VerticalAlignment="Top" Height="24" Width="54"/>
+        <TextBox x:Name="formAge" HorizontalAlignment="Left" Height="24" Margin="132,125,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="58" TextChanged="formAge_TextChanged"/>
+        <TextBox x:Name="formGender" HorizontalAlignment="Left" Height="24" Margin="132,158,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="58" TextChanged="formGender_TextChanged"/>
+        <TextBlock HorizontalAlignment="Left" Margin="70,158,0,0" TextWrapping="Wrap" Text="Gender:" VerticalAlignment="Top" Height="24" Width="54"/>
+        <TextBlock HorizontalAlignment="Left" Margin="70,39,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="35" Width="234" FontSize="18" Text="WPFApp CRUD Simulator" FontStyle="Oblique"/>
+        <Button x:Name="checkDBButton" Grid.ColumnSpan="2" Content="Check Connection to Database" HorizontalAlignment="Left" Margin="293,348,0,0" VerticalAlignment="Top" Width="209" Height="51" Click="checkDBButton_Click"/>
+        <ListBox x:Name="nameListBox" HorizontalAlignment="Left" Height="132" Margin="39,88,0,0" VerticalAlignment="Top" Width="316" Grid.Column="1"/>
+        <Button x:Name="fetchNamesButton" Content="Fetch List of Names" Grid.Column="1" HorizontalAlignment="Left" Margin="39,59,0,0" VerticalAlignment="Top" Width="125" Click="fetchNamesButton_Click"/>
+        <TextBox x:Name="formNameEdit" HorizontalAlignment="Left" Height="24" Margin="132,281,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="218" TextChanged="formName_TextChanged"/>
+        <TextBlock HorizontalAlignment="Left" Margin="70,281,0,0" TextWrapping="Wrap" Text="Name :" VerticalAlignment="Top" Height="24" Width="54"/>
+        <TextBlock HorizontalAlignment="Left" Margin="70,315,0,0" TextWrapping="Wrap" Text="Age:" VerticalAlignment="Top" Height="24" Width="54"/>
+        <TextBox x:Name="formAgeEdit" HorizontalAlignment="Left" Height="24" Margin="132,315,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="58" TextChanged="formAge_TextChanged"/>
+        <TextBox x:Name="formGenderEdit" HorizontalAlignment="Left" Height="24" Margin="132,348,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="58" TextChanged="formGender_TextChanged"/>
+        <TextBlock HorizontalAlignment="Left" Margin="70,348,0,0" TextWrapping="Wrap" Text="Gender:" VerticalAlignment="Top" Height="24" Width="54"/>
+        <TextBlock x:Name="selectIDEdit" HorizontalAlignment="Left" Margin="70,248,0,0" TextWrapping="Wrap" Text="ID :" VerticalAlignment="Top" Height="24" Width="54"/>
+        <ComboBox x:Name="listIDEdit" HorizontalAlignment="Left" Margin="132,248,0,0" VerticalAlignment="Top" Width="58" Cursor="Hand" SelectionChanged="listIDEdit_SelectionChanged"/>
+        <Button x:Name="buttonUpdate" Content="Update User" HorizontalAlignment="Left" Margin="70,381,0,0" VerticalAlignment="Top" Width="120" Click="ButtonUpdate_Click"/>
+
+    </Grid>
+</Window>
